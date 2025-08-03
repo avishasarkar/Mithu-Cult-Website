@@ -1,68 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>
       Mithu Cult
-    </title>
-    <style> 
-      h1 {
-        font-size: 40px;
-        font-family: "Roboto";
-        font-weight: normal;
-        color : rgb(100,100,100);
-        text-align : center;
-      }
-
-      #banner{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width = 100%;
-        height = 360px;
-        object-fit: contain;
-  
-      }
-
-      h2{
-        font-family: "Roboto";
-        font-size: 32px;
-        color : rgb(100,100,100);
-        text-align: center;
-        font-weight: normal;
-      
-      }
-
-      p{
-        font-family: "Roboto";
-        color: rgb(80,80,80);
-      }
-      #container{
-        max-width: 720px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-    </style>
+    </title>           
   </head>
   <body>
-       
-    <img id = "banner" src = "https://33b25924-c880-46c5-a7bf-ec5eb1706fb9-00-39o00qsmz5rzn.sisko.replit.dev/static/mithucult%20banner.png" height = "295" width = "885">
+   <div class = "container">
+    <img class = "rounded mx-auto d-block" id = "banner" src = "https://33b25924-c880-46c5-a7bf-ec5eb1706fb9-00-39o00qsmz5rzn.sisko.replit.dev/static/mithucult%20banner.png" height = "295" width = "885">
     <div id = "container"> 
-      <h1>Welcome to Mithu Cult.</h1>
+      <h1 class = "text-center mt-2 mb-2">Welcome to Mithu Cult.</h1>
       <br>
-      <h2>
+      <h2 class = "text-center">
         Who are we?
       </h2>
-      <p>
+      <p class= "lead">
         We are not your average flock. We are an utterly devoted community united by our shared adoration for the most magnificent, mischievous, and melodious creature on Earth: His Holiness Lord Roronoa Mithu, our illustrious Parrot Overlord.
       </p>
-      <h2>
+      <h2 class = "text-center mt-2 mb-2">
         Join Us Today!
       </h2>
-      <p> TODO Implement form application</p>
-      <div style = "text-align:center;">
-      <button> Contact Us </button>
+      <p>
+        {% for position in positions %}
+          <div style = "margin-bottom:16px;">
+            <h4 
+              style = "color: rgb(120, 120, 120); margin-bottom:4px;">
+              {{position['title']}}
+            </h4>
+            <div><b>
+              Location:</b> {{position['location']}}
+            </div>              
+          </div>
+        {% endfor %}
+      </p>
+      <div class = "text-center">
+      <button class = "btn btn-outline-primary"> Contact Us </button>
+        <br>
+        <p class = "text-center mt-4">Copyright 2025, Mithu Cult</p>
       </div>
     </div>
   </body>
