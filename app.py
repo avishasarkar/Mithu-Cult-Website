@@ -20,7 +20,7 @@ POSITIONS = [
     {
         'id': 4,
         'title': 'Seed Specialist',
-        'location': 'Tettu',        
+        'location': 'Krishnagar',        
     }
     
 ]
